@@ -13,17 +13,17 @@ public class DisplyWindow extends Message implements ActionListener {
 	JFrame frame = new JFrame("Deep Thought");
 	JMenuBar menuBar = new JMenuBar();
 	JMenu file = new JMenu("FILE");
-	JMenu help = new JMenu("Help");
-	JMenuItem open = new JMenuItem("Open");
 	JMenuItem history = new JMenuItem("History");
-	// Creating the panel at bottom and adding components
-	JPanel panel = new JPanel(); // the panel is not visible in output
+	JMenuItem help = new JMenuItem("Help");
+	
+	JPanel panel = new JPanel(); 
 	JLabel label = new JLabel("Ask your pesky questions!");
 	JLabel topLabel = new JLabel("Ask DeepThought");
-	JTextField myTextField = new JTextField(30); // accepts up to 100 characters
+	JTextField myTextField = new JTextField(30); // accepts up to 30 characters
 	JButton send = new JButton("Send");
 	JButton reset = new JButton("Reset");
-	// Text Area at the Center
+
+	// Text Area at the Centre
 	JTextArea myTextArea = new JTextArea("Ask DeepThought anything!         \n");
 
 	public DisplyWindow() {
@@ -32,17 +32,14 @@ public class DisplyWindow extends Message implements ActionListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(700, 700);
 		menuBar.add(file);
-		menuBar.add(help);
 		this.name = JOptionPane.showInputDialog("What is your name buddy?");
-		file.add(open);
 		file.add(history);
+		file.add(help);
 
 		send.addActionListener(this);
 		reset.addActionListener(this);
 		history.addActionListener(this);
-		open.addActionListener(this);
-
-		// send.add(label);
+		help.addActionListener(this);
 
 		panel.add(label); // Components Added using Flow Layout
 		panel.add(myTextField);
@@ -104,6 +101,11 @@ public class DisplyWindow extends Message implements ActionListener {
 			System.out.println(reader1.read());  //reading from the ArrayList and writing to console
 //			myTextArea.append(reader.read()); //reading from the text file and appending it to the text area
 			break;
+		case "Help":
+			// Verifying which button was pushed
+ 
+			myTextArea.append("\n lol no help here :D \n"); // reading from the text file and appending it to the text area the overloaded child function
+			
 			default:
 			break;
 		}

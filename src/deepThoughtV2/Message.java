@@ -33,7 +33,7 @@ public class Message {
 				
 				System.out.println(input); //printing the input to console
 				
-				System.out.println("size of messages is "+messages.size()); 
+//				System.out.println("size of messages is "+messages.size()); //to check how big the arraylist is 
 			}else {
 				System.out.println("The input was not found"); //print if the input was empty
 			}
@@ -60,6 +60,6 @@ public class Message {
 			}
 
 			
-			return readOut+ "\n\n  from the parent reader";
+			return readOut+ "\n  from the parent reader"; //added string is just to show which reader method is being used.
 		}
 }

@@ -27,7 +27,7 @@ public class MessageReader extends Message{
 			}
 			scanner.close();
 	
-		return message +"\n\n  from the child read function "; 
+		return message +"\n  from the child read function "; //to verify that the message is coming from the child class
 	}
 
 

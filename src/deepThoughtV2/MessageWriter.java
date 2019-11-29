@@ -14,7 +14,7 @@ public class MessageWriter extends Message{
 	}
 	//invoking super = modularity and constructor overloading 
 	public MessageWriter(String text) {
-		super(text);		
+		super(text);	//invoking super = reuse	
 		
 		if (text != null) {
 			try{
