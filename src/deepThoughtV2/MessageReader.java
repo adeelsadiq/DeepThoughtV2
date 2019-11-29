@@ -19,7 +19,6 @@ public class MessageReader extends Message{
 			try {
 				scanner = new Scanner(new FileReader(FILE_NAME));
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			while (scanner.hasNextLine()) { // to avoid reading past the end of the file
