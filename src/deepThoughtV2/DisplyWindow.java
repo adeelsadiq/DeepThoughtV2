@@ -6,6 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 //this class is for drawing out the actual GUI component of the program
+//https://www.geeksforgeeks.org/java-swing-jtextarea/ used the site for help with GUI 
 
 public class DisplyWindow extends Message implements ActionListener {
 	String name;
