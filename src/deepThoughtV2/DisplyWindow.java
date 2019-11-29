@@ -2,11 +2,10 @@ package deepThoughtV2;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 
 //this class is for drawing out the actual GUI component of the program
-//https://www.geeksforgeeks.org/java-swing-jtextarea/ used the site for help with GUI 
+//https://www.geeksforgeeks.org/java-swing-jtextarea/ used this site for help with understanding the GUI 
 
 public class DisplyWindow extends Message implements ActionListener {
 	String name;
@@ -61,11 +60,11 @@ public class DisplyWindow extends Message implements ActionListener {
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent click) {
 		
 		MessageWriter writer = new MessageWriter(); // the MessageWriter instance is created
 		
-		String actionPerformed = e.getActionCommand(); // creating the string instance to hold the action command
+		String actionPerformed = click.getActionCommand(); // creating the string instance to hold the action command
 		//creating a string to hold the final text that is to be written to file and text area
 		String textToAppend = name + " asks: " + mainMessage + "\nDeepThought says: " + writer.getAnswer() + "\n";
 		
